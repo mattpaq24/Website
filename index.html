@@ -2,111 +2,274 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MP</title>
-
-
-    <!--BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js">
+    </script>
 
-    <!--CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!--Various fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="index.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="hh.css">
+    <meta charset="utf-8" />
+
 </head>
 
 <body>
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center">
-            <!--TOP PART-->
-            <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-                <img class="mb-3" src="HandHImages/me.svg" alt="" width="100" />
-                <h1 class="">Hi, I'm Matthew.</h1>
-                <p class="lead">
-                    Welcome to my portfolio. If you like what you see, feel free to
-                    reach me at
-                    <a href="mailto:MatthewThomasPaquette@gmail.com">MatthewThomasPaquette@gmail.com</a>
-                </p>
-                <div class="p-3"></div>
-                <!--PROJECTS CONT-->
-                <div class="row">
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-                        <h3 class="h4">Things I've made</h3>
-                    </div>
-                </div>
-                <!--THUMBNAIL CONTAINER-->
-                <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <!--PROJECT 1-->
-                    <div class="col">
-                        <div class="card h-100 border-0">
-                            <a href="HandH.html">
-                            <div class="card-header bg-transparent border-0 ps-0">GAME</div>
-                            <img src="HandHImages/LOGO(1).svg" class="card-img-top border" alt="..." />
-                            <div class="card-body ps-0 pe-0">
-                                <h5 class="card-title">Half-and-half</h5>
-                                <p class="card-text">Exploring communication through a collaborative origami experience.
-                                </p>
+
+    <main>
+        <div class="container-fluid p-4" style="background-color: rgb(145, 183, 255);">
+            <div class="row m-0 p-0">
+                <div id="testSketch" class="col-12 col-sm-12 col-md-10 col-lg-8 p-0 m-0 bg-transparent"></div>
+                <!--SPLASH-->
+                <div class="container vh-100" id="splash">
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-12 my-auto mx-auto text-center">
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-sm-5 col-md-3 col-lg-2 m-3">
+                                    <img class='w-100' src="img/img/LOGO(1).svg" alt="">
+                                </div>
                             </div>
-                                </a>
+
+                            <h1 class="text-center">Half-and-half</h1>
+                            <h3 class="fw-light text-center mt-3 mb-5">A collaborative origami experience</h3>
+                            <div class="d-grid d-sm-block text-center">
+                                <button class="btn m-1 btn-dark title-button btn-lg" type="button" id="btnStart"
+                                    onclick="btnStartF()">Start</button>
+                                <button type="button" class="m-1 btn text-center title-button btn-lg btn-outline-dark"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Instructions
+                                </button>
+
+                            </div>
                         </div>
                     </div>
-                    <!--PROJECT 2-->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content p-3">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title h2" id="exampleModalLabel">How it works
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-start">
+                                    <h5 class="">You will need:</h5>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="m-0">&#8226; A partner</p>
+                                            <p class="">&#8226; Origami paper</p>
+                                        </div>
+                                    </div>
 
-                    <div class="col">
-                        <a href="plancreation.html">
-                            <div class="card h-100 border-0">
-                                <div class="card-header bg-transparent border-0 ps-0">
-                                    CASE STUDY
+                                    <h5 class="">Directions</h5>
+                                    <p>Instructions to fold an origami model are split into two sets:
+                                        the odd-numbered
+                                        instructions, and the even-numbered instructions.
+                                    <p>
+                                    <p>Choose one of these sets; make sure your partner
+                                        selects the opposite
+                                        set.
+                                    <p>
+                                    <p>At each step, instructions are only visible to one partner; the
+                                        partner with the
+                                        odd-numbered set can only see the instructions for odd-numbered
+                                        steps, and vice
+                                        versa.
+                                    <p>
+                                    <p>Partners take turns teaching each instruction until the
+                                        model is completed.
+                                    </p>
                                 </div>
-                                <img src="Purell Bottle (2023).png" class="card-img-top border" alt="..." />
-                                <div class="card-body ps-0 pe-0">
-                                    <h5 class="card-title">TREES.app</h5>
-                                    <p class="card-text">Helping a startup bring school-specific resources to university
-                                        students.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--CHOOSE-->
+                <div class="container vh-100" id="choose">
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-12 my-auto mx-auto text-center">
+
+                            <h1 class="text-center">Choose your instruction set</h1>
+                            <p class="text-center mb-5">(Make sure your partner chooses the opposite)</p>
+
+                            <div class="d-grid d-sm-block text-center">
+                                <button class="btn m-1 btn-outline-dark title-button btn-lg" type="button" id="btnStart"
+                                    onclick="btnOddStart()" on>Odd</button>
+                                <button class="btn m-1 btn-outline-dark title-button btn-lg" type="button" id="btnStart"
+                                    onclick="btnEvenStart()">Even</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--JOURNEY-->
+                <div class="container vh-100" id="journey">
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content p-3">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title h2" id="exampleModalLabel2">How it works
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
-                                <div class="card-footer bg-transparent border-0 ps-0 pe-0">
-                                    <small class="text-body-secondary">May 2023</small>
+                                <div class="modal-body text-start">
+                                    <h5 class="">You will need:</h5>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="m-0">&#8226; A partner</p>
+                                            <p class="">&#8226; Origami paper</p>
+                                        </div>
+                                    </div>
+
+                                    <h5 class="">Directions</h5>
+                                    <p>Instructions to fold an origami model are split into two sets:
+                                        the odd-numbered
+                                        instructions, and the even-numbered instructions.
+                                    <p>
+                                    <p>Choose one of these sets; make sure your partner
+                                        selects the opposite
+                                        set.
+                                    <p>
+                                    <p>At each step, instructions are only visible to one partner; the
+                                        partner with the
+                                        odd-numbered set can only see the instructions for odd-numbered
+                                        steps, and vice
+                                        versa.
+                                    <p>
+                                    <p>Partners take turns teaching each instruction until the
+                                        model is completed.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row h-100">
+                        <div class="col-12 my-auto text-center">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-6 col-lg-2 p-0 mx-0">
+                                    <button type="button" onclick="btnExit()"
+                                        class="btn btn-link text-dark text-decoration-none d-flex p-0 align-items-center text-start fs-5">
+                                        <svg type='button' xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                            fill="currentColor" class="bi bi-arrow-left-short m-0 p-0"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z">
+                                            </path>
+                                        </svg>
+                                        Exit
+                                    </button>
+
+
+
+                                </div>
+                                <div class="col-6 col-lg-2 px-0 my-2 mx-0">
+                                    <div class="help-holder text-end">
+                                        <svg type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                                        </svg>
+                                    </div>
+
                                 </div>
                             </div>
-                        </a>
+
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-sm-12 col-lg-4 bg-light px-5 pt-4 mt-2 rounded" id="imageCol">
+                                    <h3 class="rounded" id="counter"></h3>
+                                    <div class="progress" role="progressbar" aria-label="Basic example"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div id='progressBar' class="progress-bar" style=""></div>
+                                    </div>
+                                    <div class="lead mb-4 mt-4 text-nowrap" id="instructText">Default
+                                    </div>
+                                    <div class='my-5' id='putThingsHere' style="min-height: 250px; max-height: 600px; display: flex;
+                                        align-items: center;">
+                                        <div class="collapse text-center collapse-horizontal mx-auto"
+                                            id="collapseWidthExample">
+                                            <div class="card card-body border-0 bg-light m-0 p-0 mx-auto"
+                                                style="width: 250px;">
+                                                <img id="cardImage" src="" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark btn-lg mb-0 mt-4" type="button" id="Next"
+                                        onclick="btnNextF()">Next</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!--PROJECT 3-->
 
-                    <div class="col">
-                        <a href="legible.html">
-                            <div class="card h-100 border-0">
-                                <div class="card-header bg-transparent border-0 ps-0">
-                                    CASE STUDY
-                                </div>
-                                <img src="Purell Bottle (2023).png" class="card-img-top border" alt="..." />
-                                <div class="card-body ps-0 pe-0">
-                                    <h5 class="card-title">Legible</h5>
-                                    <p class="card-text">Blah.</p>
-                                </div>
-                                <div class="card-footer bg-transparent border-0 ps-0 pe-0">
-                                    <small class="text-body-secondary">May 2023</small>
+
+                    <!-- Modal -->
+
+                </div>
+                <!-- FINISH -->
+
+                <div class="container vh-100" id="finish">
+                    <div class="row h-100">
+                        <div class="col-12 col-lg-12 my-auto mx-auto text-center">
+                            <h1 class="text-center">Sensational</h1>
+                            <div class="p-4"></div>
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-sm-5 col-md-3 col-lg-2 m-3">
+                                    <img class='w-50' src="img/img/Finished.svg" alt="">
                                 </div>
                             </div>
-                        </a>
+                            <div class="p-4"></div>
+
+                            <div class="d-grid d-sm-block text-center">
+                                <button class="btn m-1 btn-dark title-button btn-lg" type="button" id="btnStart"
+                                    onclick="btnHome()">Home</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <script src="sketch.js"></script>
+
+
+            <!--
+        <div class="container h-100 border text-md-center" id="instructions">
+            <div class="row justify-content-center border">
+                <div class="col-8">
+                    <h1 class="lead">Choose an instruction set</h1>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+        </div>
+    -->
+        </div>
+    </main>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <script src="notSilly.js"></script>
+
 </body>
 
 </html>
